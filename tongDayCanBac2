@@ -1,0 +1,27 @@
+//Nhập vào 1 số N và tính biểu thức căn bậc 2 của các số từ 1 đến n.
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int N;
+
+        do {
+            System.out.print("Nhập số nguyên dương N: ");
+            N = scanner.nextInt();
+            if (N <= 0) {
+                System.out.println("Số đã nhập không phải số nguyên dương.Vui lòng nhập lại.");
+            }
+        } while (N <= 0);
+
+        // Tính tổng các căn bậc hai của các số từ 1 đến N
+            double tong = 0;
+            for (int i = 1; i <= N; i++) {
+                tong += Math.sqrt(i);
+            }
+
+            System.out.println("Tổng các căn bậc hai của các số từ 1 đến " + N + " là: " + tong);
+
+        }
+    }
