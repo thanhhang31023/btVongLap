@@ -1,0 +1,31 @@
+//Hãy kiểm tra các chữ số của số nguyên dương n có giảm dần từ trái sang phải hay không.
+//Ví dụ: N = 321 thoả mãn.
+//N = 123 không thoả mãn
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Nhập số nguyên dương N: ");
+        int n = scanner.nextInt();
+
+        // Chuyển số nguyên thành chuỗi ký tự
+        String chuoiN = Integer.toString(n);
+
+        // Duyệt qua từng chữ số trong chuỗi
+        boolean giamDan = true;
+        for (int i = 0; i < chuoiN.length() - 1; i++) {
+            // Nếu chữ số hiện tại nhỏ hơn chữ số tiếp theo, số không thoả mãn
+            if (chuoiN.charAt(i) < chuoiN.charAt(i + 1)) {
+                giamDan = false;
+                break;
+            }
+        }
+
+        if (giamDan) {
+            System.out.println("Số " + n + " có giảm dần từ trái sang phải.");
+        } else {
+            System.out.println("Số " + n + " không có giảm dần từ trái sang phải.");
+        }
+    }
+}
