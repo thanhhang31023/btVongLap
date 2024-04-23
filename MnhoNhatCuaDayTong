@@ -1,0 +1,23 @@
+//Nhập vào số N. Hãy tìm số M nhỏ nhất sao cho:
+//1 + 2 + ... + M > N
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Nhập số nguyên dương N: ");
+        int N = scanner.nextInt();
+
+        int tong = 0;
+        int M = 0;
+
+        while (tong <= N) {
+            M++;
+            tong += M;
+        }
+
+        System.out.println("Số M nhỏ nhất sao cho tổng 1 + 2 + ... + M > " + N + " là: " + M);
+
+        scanner.close();
+    }
+}
