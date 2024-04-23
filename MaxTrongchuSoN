@@ -1,0 +1,24 @@
+//Cho một số nguyên dương N. Hãy tìm số lớn nhất trong các chữ số của N.
+//Ví dụ: 1234 thì chữ số lớn nhất là 4.
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Nhập số nguyên dương N: ");
+        int N = scanner.nextInt();
+
+        int maxChuSo = 0;
+        while (N > 0) {
+            int chuSo = N % 10;
+            if (chuSo > maxChuSo) {
+                maxChuSo = chuSo;
+            }
+            N /= 10;
+        }
+
+        System.out.println("Chữ số lớn nhất trong số đã nhập là: " + maxChuSo);
+
+        scanner.close();
+    }
+    }
