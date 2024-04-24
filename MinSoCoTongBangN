@@ -1,5 +1,12 @@
 // Viết chương trình tìm và in ra số nguyên dương nhỏ nhất mà tổng các chữ số của nó bằng một số nguyên dương N nhập từ bàn phím. Biết rằng 0< N < 100;
 
+//ý tưởng thực hiện bài tìm số nhỏ nhất có tổng bằng số nhập vào n
+//- số cần tìm luôn thỏa mãn được tạo bởi 2 phần.
+//phần đầu  gồm 1 kí tự, kí tự này là phần dư của N%9
+//phần sau gồm m kí tự số 9, m này là phần nguyên của N/9
+//nếu sô N chia hết 9 thì phần trước rỗng
+//in ra số cần tìm là in lần lượt phần đầu và phần sau nối tiếp nhau.
+
 import java.util.Scanner;
 
 public class Main {
