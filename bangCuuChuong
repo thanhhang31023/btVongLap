@@ -1,18 +1,18 @@
-//  in ra bảng cửu chương từ 1 đến 12
+//  in ra bảng cửu chương từ 1 đến 
 
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Bảng cửu chương từ 1 đến 12:");
+        System.out.println("Bảng cửu chương từ 1 đến 10:");
 
-        // Duyệt qua từng cửu chương từ 1 đến 12
-        for (int i = 1; i <= 12; i++) {
+        // Duyệt qua từng cửu chương từ 1 đến 10
+        for (int i = 1; i <= 10; i++) {
             System.out.println("Bảng cửu chương " + i + ":");
 
             // Duyệt qua từng phép nhân trong cửu chương
-            for (int j = 1; j <= 12; j++) {
+            for (int j = 1; j <= 10; j++) {
                 // In ra kết quả của phép nhân
-                System.out.println(j + " x " + i + " = " + (j * i));
+                System.out.println(i + " x " + j + " = " + (j * i));
             }
 
             // In ra dòng trống để phân tách giữa các cửu chương
