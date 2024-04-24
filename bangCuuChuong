@@ -1,4 +1,4 @@
-//  in ra bảng cửu chương từ 1 đến 
+//  in ra bảng cửu chương từ 1 đến 10
 
 import java.util.Scanner;
 public class Main {
