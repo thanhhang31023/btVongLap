@@ -1,0 +1,36 @@
+// Viết chương trình tìm và in ra số nguyên dương nhỏ nhất mà tổng các chữ số của nó bằng một số nguyên dương N nhập từ bàn phím. Biết rằng 0< N < 100;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int N;
+
+        do {
+            System.out.print("Nhập số nguyên dương N (0 < N < 100): ");
+            N = scanner.nextInt();
+            if (N <= 0 || N >= 100) {
+                System.out.println("Số N phải lớn hơn 0 và nhỏ hơn 100. Vui lòng nhập lại.");
+            }
+        } while (N <= 0 || N >= 100);
+
+        // Tính phần dư của N khi chia cho 9 ( để in ra ở phần đầu của số cần tìm)
+        int phanDau = N % 9;
+        // Tính phần nguyên của N khi chia cho 9 ( để in ra ở phần sau của số cần tìm)
+        int phanSau = N / 9;
+
+        // In ra số cần tìm bằng cách in lần lượt từ phần đầu đến phần sau
+        if (phanDau == 0) {    // Trường hợp số N chia hết cho 9 ( tức là phần đầu rỗng),chỉ in nguyên phần sau.
+            for (int i = 0; i < phanSau; i++) {
+                System.out.print("9");
+            }
+        } else {
+            // Trường hợp số N không chia hết cho 9, in cả 2 phần đầu và sau.
+            System.out.print(phanDau);
+            for (int i = 0; i < phanSau; i++) {
+                System.out.print("9");
+            }
+        }
+    }
+}
