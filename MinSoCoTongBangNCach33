@@ -1,0 +1,29 @@
+// Viết chương trình tìm và in ra số nguyên dương nhỏ nhất mà tổng các chữ số của nó bằng một số nguyên dương N nhập từ bàn phím. Biết rằng 0< N < 100;
+
+public class Main {
+    public static String minM(int N) {
+        int phanDau = N % 9;
+        int phanSau = N / 9;
+
+        StringBuilder result = new StringBuilder();
+
+        if (0 < phanDau) {
+            result.append(phanDau);
+        }
+        for (int i = 0; i < phanSau; i++) {
+            result.append("9");
+        }
+
+        return result.toString();
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Số nguyên dương nhỏ nhất mà tổng các chữ số của nó bằng 7 là: " + minM(7));
+        System.out.println("Số nguyên dương nhỏ nhất mà tổng các chữ số của nó bằng 9 là: " + minM(9));
+        System.out.println("Số nguyên dương nhỏ nhất mà tổng các chữ số của nó bằng 11 là: " + minM(11));
+        System.out.println("Số nguyên dương nhỏ nhất mà tổng các chữ số của nó bằng 25 là: " + minM(25));
+        System.out.println("Số nguyên dương nhỏ nhất mà tổng các chữ số của nó bằng 89 là: " + minM(89));
+        System.out.println("Số nguyên dương nhỏ nhất mà tổng các chữ số của nó bằng 99 là: " + minM(99));
+
+    }
+}
