@@ -19,6 +19,8 @@ public class Main {
         int phanDau = N % 9;
         int phanSau = N / 9;
 
+        System.out.print("Số nguyên dương nhỏ nhất mà tổng các chữ số của nó bằng N là: ");
+
         if (0 < phanDau) {
                 System.out.print(phanDau);
             }
@@ -27,4 +29,3 @@ public class Main {
             }
         }
     }
-
